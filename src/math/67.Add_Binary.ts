@@ -13,6 +13,5 @@
 
 
 const addBinary = (a: string, b: string): string => {
-    const sum = parseInt(a, 2) + parseInt(b, 2);
-    return sum.toString(2);
+    return (BigInt("0b" + a) + BigInt("0b" + b)).toString(2);
 };
